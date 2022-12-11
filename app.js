@@ -1,22 +1,18 @@
-const http = require('http');
+const express = require('express');
+
+const app = express();
+
+app.get('/currenttime', function(req, res) {
+    res.send('<h1>' + new Date().toISOString() +'</h1>');
+});
+
+app.get('/', function(req, res) {
+    res.send('<h1>Hello world !!</h1>');
+    // res.send('<h1>Hello Word !</h1>');
+});
+
+app.listen(3000);
 
 
-function handleRequest (request, response) {
-    if (request.url === '/currenttime'){
-        response.statusCode =200;
-        response.end('<h1>' + new Date().toISOString() +'</h1>');
-    
-    } else {
-    response.statusCode =200;
-    response.end('<h1>Hello Word !</h1>');
-    }
 
-}
 
-const server = http.createServer(handleRequest);
-
-const userName = 'Mican Adrian';
-
-console.log(userName);
-
-server.listen(3000);
