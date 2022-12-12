@@ -4,8 +4,10 @@
   "description": "learn express nodejs",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"nodemon app.js"
   },
+
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adimican/Learn-nodejs.git"
@@ -18,5 +20,8 @@
   "homepage": "https://github.com/adimican/Learn-nodejs#readme",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
